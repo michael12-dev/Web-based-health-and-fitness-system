@@ -1,0 +1,113 @@
+{% extends 'hospital/patient_base.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+    #colorbutt{
+      background-color: red;
+      color: white;
+    }
+    .doctor-list-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.doctor-list-panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.doctor-list-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.doctor-list-title {
+  margin: 0;
+}
+
+.doctor-list-table-wrapper {
+  overflow-x: auto;
+}
+
+.doctor-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.doctor-list-table th,
+.doctor-list-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.doctor-list-table th {
+  background-color: #f2f2f2;
+}
+
+.no-doctor-found {
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+}
+
+  </style>
+</head>
+
+<br><br>
+<div class="doctor-list-container">
+  {% if doctors %}
+  <div class="doctor-list-panel">
+    <div class="doctor-list-heading">
+      <h2 class="doctor-list-title">Total Doctor List</h2>
+    </div>
+    <div class="doctor-list-table-wrapper">
+      <table class="doctor-list-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Profile Picture</th>
+            <th>Mobile</th>
+            <th>Address</th>
+            <th>Department</th>
+          </tr>
+        </thead>
+        {% for doctor in doctors %}
+        <tr>
+          <td>{{ doctor.get_name }}</td>
+          <td><img src="{% static doctor.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px"></td>
+          <td>{{ doctor.mobile }}</td>
+          <td>{{ doctor.address }}</td>
+          <td>{{ doctor.department }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  {% else %}
+  <div class="no-doctor-found">
+    <h4>No Doctor Found !!!</h4>
+  </div>
+  {% endif %}
+</div>
+
+{% endblock content %}

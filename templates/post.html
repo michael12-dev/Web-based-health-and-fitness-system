@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="card-body">
+        <h5 class="card-title">All Blog Posts</h5>
+
+        <div class="container">
+
+            <div class="author"> {{blog_post.name}}</div>
+            <div class="date"> {{blog_post.date}}</div>
+            <h1 class="title"> {{blog_post.title}} <b> </b> </h1>
+            <div class="content">
+                {{blog_post.blog}}
+            </div>
+            
+            <button id="butt"> <a id="butta" href=""> Back to dashboard</a></button>
+            
+        </div>   
+      </div>
+
+    </div>
+  </div><!-- End Reports -->
+  <style>
+.container {
+max-width: 800px;
+margin: auto;
+padding: 20px;
+background-color: #ffffff;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(108, 53, 53, 0.91);
+margin-top: 20px;
+margin-bottom: 20px;
+}
+.date{
+    margin-bottom: 10px;
+    color: black;
+    font-size: large;
+    width: fit-content;
+    padding: 3px;
+}
+      
+.author {
+  font-style: italic;
+  margin-bottom: 10px;
+  background-color: rgba(105, 105, 209, 0.622);
+  color: black;
+  font-size: larger;
+  width: fit-content;
+  padding: 3px;
+  border-radius: 15px;
+  font-family: cursive;
+}
+.title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-family: cursive;
+}
+.content {
+  font-size: 18px;
+  line-height: 1.8;
+}
+#butt {
+  width: fit-content;
+  background-color: rgba(146, 146, 193, 0.378);
+}
+#butta {
+  text-decoration: none;
+}
+#butt {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Link Styles */
+#butta {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hover Styles */
+#butt:hover {
+  background-color: #45a049;
+}
+  </style>
+
+</div>
+</div><!-- End Left side columns -->
+
+</body>
+</html>

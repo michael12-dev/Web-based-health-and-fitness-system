@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+{% load widget_tweaks %}
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="{% static 'assets/css/user_login.css' %}" rel="stylesheet">
+  <title>Login Form</title>
+  
+</head>
+<body>
+  
+  <div class="container">
+    <h2>Patient Login</h2>
+        <style>
+  .message-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .message {
+    background-color: #8bc34ab7; /* Lighter Green */
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 5px 0;
+    max-width: 400px; /* Adjust as needed */
+    text-align: center;
+    font-family: cursive;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+  }
+  
+        </style>
+      
+    <form method="post">
+      {%csrf_token%}
+      {% render_field form.username class="form-control" placeholder="Username" %}
+      {% render_field form.password class="form-control" placeholder="Password"%}
+      <br>
+      <input type="submit" value="Login">
+      <br><br>
+      <p>Don't have a user account? Sign up <a href="/patientsignup">here</a></p> 
+    </form>
+  </div>
+
+</body>
+
+</html>

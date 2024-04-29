@@ -1,0 +1,108 @@
+{% extends 'hospital/doctor_base.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+    .appointments-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.appointments-panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.appointments-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.appointments-title {
+  margin: 0;
+}
+
+.appointments-table-wrapper {
+  overflow-x: auto;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+.appointments-table th {
+  background-color: #f2f2f2;
+}
+
+.appointments-table .description-cell {
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+.delete-btn {
+  padding: 6px 12px;
+}
+
+  </style>
+</head>
+
+<br><br><br><br>
+<div class="appointments-container">
+  <div class="appointments-panel">
+    <div class="appointments-heading">
+      <h2 class="appointments-title">Delete Your Appointments</h2>
+    </div>
+    <div class="appointments-table-wrapper">
+      <table class="appointments-table" id="responsive-table">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Picture</th>
+            <th>Description</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        {% for appointment, patient in appointments %}
+        <tr>
+          <td>{{ appointment.patientName }}</td>
+          <td><img src="{% static patient.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
+          <td class="description-cell">{{ appointment.description }}</td>
+          <td><a class="delete-btn btn btn-danger btn-xs" href="{% url 'delete-appointment' appointment.id %}"><span class="glyphicon glyphicon-trash"></span></a></td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
+
+
+
+

@@ -1,0 +1,98 @@
+{% extends 'hospital/doctor_base.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+    .discharged-patients-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.discharged-patients-panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.discharged-patients-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.discharged-patients-title {
+  margin: 0;
+}
+
+.discharged-patients-table-wrapper {
+  overflow-x: auto;
+}
+
+.discharged-patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.discharged-patients-table th,
+.discharged-patients-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.discharged-patients-table th {
+  background-color: #f2f2f2;
+}
+
+  </style>
+</head>
+<br><br><br>
+<div class="discharged-patients-container">
+  <div class="discharged-patients-panel">
+    <div class="discharged-patients-heading">
+      <h2 class="discharged-patients-title">Your Discharged Patient List</h2>
+    </div>
+    <div class="discharged-patients-table-wrapper">
+      <table class="discharged-patients-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Admit Date</th>
+            <th>Release Date</th>
+            <th>Symptoms</th>
+            <th>Mobile</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        {% for patient in dischargedpatients %}
+        <tr>
+          <td>{{ patient.patientName }}</td>
+          <td>{{ patient.admitDate }}</td>
+          <td>{{ patient.releaseDate }}</td>
+          <td>{{ patient.symptoms }}</td>
+          <td>{{ patient.mobile }}</td>
+          <td>{{ patient.address }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}
