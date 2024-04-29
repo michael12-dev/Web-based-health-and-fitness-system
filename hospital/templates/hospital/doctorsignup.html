@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+{% load widget_tweaks %}
+{% load static %}
+<html lang="en" dir="ltr">
+
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Page</title>
+  <link href="{% static 'assets/css/user_reg.css' %}" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <div class="title">Health Professional Registration</div>
+
+        {% for message in messages %}
+           <i style="color: red;"> {{ message }}</i>
+        {% endfor %}
+
+    <div class="content">
+      <form method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            {% render_field userForm.first_name class="form-control" placeholder="First Name" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            {% render_field userForm.username class="form-control" placeholder="Username" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Department</span>
+            {% render_field doctorForm.department class="form-control" placeholder="Department" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Address</span>
+            {% render_field doctorForm.address class="form-control" placeholder="Address" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            {% render_field userForm.last_name class="form-control" placeholder="Last Name" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            {% render_field userForm.password class="form-control" placeholder="Password" %}
+          </div>
+          
+          <div class="input-box">
+            <span class="details">Mobile Number</span>
+            {% render_field doctorForm.mobile class="form-control"  placeholder="Mobile" %}
+          </div>
+          <div class="input-box">
+            <span class="details">Upload Profile Picture</span>
+            {% render_field doctorForm.profile_pic required="required" class="form-control" placeholder="Profile Picture" %}
+          </div>
+        </div>
+
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+        <div class="text-center">Already have an account? <a href="doctorlogin">Login here</a></div>
+        
+      </form>
+    </div>
+  </div>
+  
+</body>
+
+
+</html>

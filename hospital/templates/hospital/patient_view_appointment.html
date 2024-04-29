@@ -1,0 +1,124 @@
+{% extends 'hospital/patient_base.html' %}
+{% block content %}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+    .appointments-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.appointments-title{
+  color:rgba(45, 4, 45, 0.896);
+}
+
+.appointments-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.appointments-panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.appointments-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.appointments-title {
+  margin: 0;
+}
+
+.appointments-table-wrapper {
+  overflow-x: auto;
+}
+
+.appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.appointments-table th,
+.appointments-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.appointments-table th {
+  background-color: #ccc;
+}
+
+.appointments-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.appointments-table .description-cell {
+  max-width: 400px;
+  word-wrap: break-word;
+}
+
+.appointment-status {
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+  </style>
+</head>
+
+<br><br><br>
+<div class="appointments-container">
+  <div class="appointments-panel">
+    <div class="appointments-heading">
+      <h2 class="appointments-title">Your Appointments</h2>
+    </div>
+    <div class="appointments-table-wrapper">
+      <table class="appointments-table" id="responsive-table">
+        <thead>
+          <tr>
+            <th>Doctor Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        {% for appointment in appointments %}
+        <tr>
+          <td>{{ appointment.doctorName }}</td>
+          <td class="description-cell">{{ appointment.description }}</td>
+          <td>{{ appointment.appointmentDate }}</td>
+          <td>
+            {% if appointment.status %}
+            <span class="appointment-status label label-primary">Confirmed</span>
+            {% else %}
+            <span class="appointment-status label label-success">Pending</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+
+{% endblock content %}

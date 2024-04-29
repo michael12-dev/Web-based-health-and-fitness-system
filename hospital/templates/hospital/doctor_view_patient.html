@@ -1,0 +1,107 @@
+{% extends 'hospital/doctor_base.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    .patient-list-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.patient-records-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.patient-records-panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.patient-records-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.patient-records-title {
+  margin: 0;
+}
+
+.patient-records-table-wrapper {
+  overflow-x: auto;
+}
+
+.patient-records-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patient-records-table th,
+.patient-records-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.patient-records-table th {
+  background-color: #f2f2f2;
+}
+
+.no-patient-found {
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+}
+
+
+  </style>
+</head>
+
+
+<div class="patient-records-container">
+  {% if patients %}
+  <div class="patient-records-panel">
+    <div class="patient-records-heading">
+      <h2 class="patient-records-title">Patient Records</h2>
+    </div>
+    <div class="patient-records-table-wrapper">
+      <table class="patient-records-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Profile Picture</th>
+            <th>Symptoms</th>
+            <th>Mobile</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        {% for patient in patients %}
+        <tr>
+          <td>{{ patient.get_name }}</td>
+          <td><img src="{% static patient.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px"></td>
+          <td class="symptoms-cell">{{ patient.symptoms }}</td>
+          <td>{{ patient.mobile }}</td>
+          <td>{{ patient.address }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+  {% else %}
+  <div class="no-patient-found">
+    <h4>No Patient Found !!!</h4>
+  </div>
+  {% endif %}
+</div>
+
+
+
+
+{% endblock content %}

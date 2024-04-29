@@ -1,0 +1,116 @@
+{% extends 'hospital/doctor_base.html' %}
+{% block content %}
+{%load static%}
+
+<head>
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+  <style media="screen">
+    a:link {
+      text-decoration: none;
+    }
+
+    h6 {
+      text-align: center;
+    }
+
+    .row {
+      margin: 100px;
+    }
+    .user-appointments-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.user-appointments-panel {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.user-appointments-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.user-appointments-title {
+  margin: 0;
+}
+
+.user-appointments-table-wrapper {
+  overflow-x: auto;
+}
+
+.user-appointments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.user-appointments-table th,
+.user-appointments-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.user-appointments-table th {
+  background-color: #f2f2f2;
+}
+
+.user-appointments-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.user-appointments-table img {
+  max-width: 100%;
+  height: auto;
+}
+.user-appointments-table .description-cell {
+  max-width: 400px; /* Limiting the width to prevent excessively long lines */
+  word-wrap: break-word; /* Wrap long words to prevent overflow */
+}
+
+
+
+  </style>
+</head>
+<br><br>
+<div class="user-appointments-container">
+  <div class="user-appointments-panel">
+    <div class="user-appointments-heading">
+      <h2 class="user-appointments-title">Your Appointments</h2>
+    </div>
+    <div class="user-appointments-table-wrapper">
+      <table class="user-appointments-table" id="responsive-user-table">
+        <thead>
+          <tr>
+            <th>Patient Name</th>
+            <th>Picture</th>
+            <th>Description</th>
+            <th>Contact</th>
+            <th>Address</th>
+            <th>Appointment Date</th>
+          </tr>
+        </thead>
+        {% for appointment, patient in appointments %}
+        <tr>
+          <td>{{ appointment.patientName }}</td>
+          <td><img src="{% static patient.profile_pic.url %}" alt="Profile Pic" height="40px" width="40px" /></td>
+          <td class="description-cell">{{ appointment.description }}</td>
+          <td>{{ patient.mobile }}</td>
+          <td>{{ patient.address }}</td>
+          <td>{{ appointment.appointmentDate }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock content %}

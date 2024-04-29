@@ -1,0 +1,606 @@
+
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>BeaconFit</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/style.css' %}" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-flex align-items-center fixed-top">
+    <div class="container d-flex justify-content-between">
+      <div class="contact-info d-flex align-items-center">
+        <i class="bi bi-envelope"></i> <a href="www.gmail.com">nzeremichael2020@gmal.com</a>
+        <i class="bi bi-phone"></i> +234 706 385 2480
+      </div>
+      <div class="d-none d-lg-flex social-links align-items-center">
+        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">BeaconFit</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo me-auto"><img src="{% static 'assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#departments">Departments</a></li>
+          <li><a class="nav-link scrollto" href="#doctors">Founders</a></li>
+          <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="/patientlogin">User Login</a></li>
+              <li class="dropdown"><a href="/adminlogin"><span>Admin Login</span> </a></li>
+              <li><a href="/doctorlogin">Health Personnel Login</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+
+          <li class="dropdown"><a href=""><span>Register with us</span></a>
+            <ul>
+              <li><a href="/patientsignup"> Register as Patient</a></li>
+              <li><a href="/doctorsignup">Register as Health Specialist</a></li>
+              <li><a href="/adminsignup">Register as Admin</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+    <!-- ======= Hero Section ======= -->
+<section id="hero" class="d-flex align-items-center">
+  <div class="container">
+    <h1>Welcome to BeaconFit</h1> <br><br>
+
+    <h2 style="font-weight: 900;"> Your Ultimate Health and Fitness Companion</h2>
+    <h5 style="font-weight: 200;"> <i>Empowering civil servants on their wellness journey</i> </h5>
+    <a href="/patientclick" class="btn-get-started scrollto">Get Started</a>
+  </div>
+</section><!-- End Hero -->
+
+
+
+<!-- ======= Why Us Section ======= -->
+<section id="why-us" class="why-us why-us-with-margin" >
+  <div class="container" >
+
+    <div class="row">
+      <div class="col-lg-4 d-flex align-items-stretch">
+        <div class="content">
+          <h3>What We Offer</h3>
+          <p>
+            At BeaconFit, we take pride in our commitment to catering specifically to the distinctive health and fitness needs of civil servants. 
+            Our platform is meticulously crafted to address the nuanced challenges and requirements unique to individuals serving in civil service roles by linking them to the best health care sectors and ensuring productivity in their works.
+          </p>
+          <div class="text-center">
+            <a href="" class="more-btn">Learn More <i class="bx bx-chevron-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 d-flex align-items-stretch">
+        <div class="icon-boxes d-flex flex-column justify-content-center">
+          <div class="row">
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class="bx bx-receipt"></i>
+                <h4>Personalized Wellness</h4>
+                <p>Experience adequate health and fitness plans for civil service roles.</p>
+              </div>
+            </div>
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class="bx bx-cube-alt"></i>
+                <h4>Experienced Healthcare Practitioners</h4>
+                <p>Benefit from the wisdom and guidance of seasoned healthcare practitioners </p>
+              </div>
+            </div>
+            <div class="col-xl-4 d-flex align-items-stretch">
+              <div class="icon-box mt-4 mt-xl-0">
+                <i class="bx bx-images"></i>
+                <h4>Comprehensive Tracking</h4>
+                <p>Stay on top of your health journey with our comprehensive tracking features, allowing you to monitor and assess your progress.</p>
+              </div>
+            </div>
+          </div>
+        </div><!-- End .content-->
+      </div>
+    </div>
+
+  </div>
+
+</section><!-- End Why Us Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+    
+        <div class="section-title">
+          <h2>Our Services</h2>
+          <p>Discover the range of specialized services we offer to enhance your health and well-being.</p>
+        </div>
+    
+        <div class="row">
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4>Health Assessments</h4>
+              <p>Thorough health assessments customized to suit your individual needs and objectives..</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4>Medication Management</h4>
+              <p>Thorough health assessments tailored to your specific needs and goals, including comprehensive prescription recommendations.</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4>Specialized Care</h4>
+              <p>Dedicated healthcare professionals providing specialized care for your needs.</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-dna"></i></div>
+              <h4>Health Awareness Blogs</h4>
+              <p>Expert write up services to guide you in understanding your health more.</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-wheelchair"></i></div>
+              <h4>Seamless Connectivity</h4>
+              <p>integrated flow of information, promoting a connected and collaborative environment</p>
+            </div>
+          </div>
+    
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
+            <div class="icon-box">
+              <div class="icon"><i class="fas fa-notes-medical"></i></div>
+              <h4>Medical Documentation</h4>
+              <p>Accurate and detailed medical documentation for your records and future reference.</p>
+            </div>
+          </div>
+    
+        </div>
+    
+      </div>
+    </section><!-- End Services Section -->
+    
+    
+   
+
+
+   <!-- ======= Departments Section ======= -->
+<section id="departments" class="departments">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Departments</h2>
+      <p>Explore our specialized medical departments, each dedicated to providing exceptional care and expertise in their respective fields.</p>
+    </div>
+
+    <div class="row gy-4">
+      <div class="col-lg-3">
+        <ul class="nav nav-tabs flex-column">
+          <li class="nav-item">
+            <a class="nav-link active show" data-bs-toggle="tab" href="#tab-1">Cardiology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">Stress Management Specialist</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">Pharmacology</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">Pediatrics</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">Eye Care</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-9">
+        <div class="tab-content">
+          <!-- Content for each department tab -->
+          <!-- Cardiology -->
+          <div class="tab-pane active show" id="tab-1">
+            <div class="row gy-4">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Cardiology</h3>
+                <p class="fst-italic">Dedicated to providing expert care for heart-related conditions and promoting cardiovascular health.</p>
+                <p>Our cardiology department focuses on innovative treatments and preventive care to ensure the well-being of your heart.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'assets/img/departments-1.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <!-- Stress Management -->
+          <div class="tab-pane" id="tab-2">
+            <div class="row gy-4">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Stress Management</h3>
+                <p class="fst-italic">Specializing in addressing and alleviating stress-related conditions through therapeutic approaches and lifestyle interventions.</p>
+                <p>Our Stress Management Specialist helps individuals cope with stress and improve their overall well-being.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'assets/img/departments-2.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <!-- Pharmacology -->
+          <div class="tab-pane" id="tab-3">
+            <div class="row gy-4">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Pharmacology</h3>
+                <p class="fst-italic">Experts in prescribing and managing drug therapies to treat various health conditions.</p>
+                <p>Our pharmacology department ensures the safe and effective use of medications for your individual needs.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'assets/img/departments-3.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <!-- Pediatrics -->
+          <div class="tab-pane" id="tab-4">
+            <div class="row gy-4">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Pediatrics</h3>
+                <p class="fst-italic">Dedicated to the health and medical care of infants, children, and adolescents.</p>
+                <p>Our pediatrics department focuses on providing compassionate and specialized care for young patients.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'assets/img/departments-4.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+          <!-- Eye Care -->
+          <div class="tab-pane" id="tab-5">
+            <div class="row gy-4">
+              <div class="col-lg-8 details order-2 order-lg-1">
+                <h3>Eye Care</h3>
+                <p class="fst-italic">Specializing in the study and treatment of disorders related to the eyes and visual system.</p>
+                <p>Our eye care department is committed to maintaining and improving the vision health of our patients.</p>
+              </div>
+              <div class="col-lg-4 text-center order-1 order-lg-2">
+                <img src="{% static 'assets/img/departments-5.jpg' %}" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Departments Section -->
+
+
+    <!-- ======= Founders Section ======= -->
+    <section id="doctors" class="doctors">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/doctors/doctors-1.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Nzere Michael Okafor</h4>
+                <span>Founder of BeaconFit</span>
+                <p>I am a software engineer and a final year student at the University of Nigeria Nsukka, deeply committed to enhancing individual health and fitness through cutting-edge technology.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 mt-lg-0">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/doctors/doctors-2.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>University of Nigeria, Nsukka</h4>
+                <span>Institutional Partner</span>
+                <p> Our institutional partner in the journey towards creating a healthier future through technological advancements.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start">
+              <div class="pic"><img src="{% static 'assets/img/doctors/doctors-3.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Department of Computer Science, UNN Chapter</h4>
+                <span>Academic Partners</span>
+                <p>A collaborative effort with the Department of Computer Science, University of Nigeria Nsukka, to bridge technology and healthcare.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          
+
+        </div>
+
+      </div>
+    </section><!-- End Founders Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+<section id="faq" class="faq section-bg">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Frequently Asked Questions</h2>
+      <p>Explore common inquiries about BeaconFit to better understand how our platform can enhance your health and well-being.</p>
+    </div>
+
+    <div class="faq-list">
+      <ul>
+        <li data-aos="fade-up">
+          <i class="bx bx-help-circle icon-help"></i>
+          <a data-bs-toggle="collapse" class="collapse" data-bs-target="#faq-list-1">Where is BeaconFit located? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-1" class="collapse show" data-bs-parent=".faq-list">
+            <p>
+              BeaconFit operates remotely, connecting you with health practitioners and providing an exceptional health tracking platform for your well-being.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="100">
+          <i class="bx bx-help-circle icon-help"></i>
+          <a data-bs-toggle="collapse" data-bs-target="#faq-list-2" class="collapsed">Is BeaconFit designed exclusively for civil servants? Who can register? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-2" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              BeaconFit is primarily designed for civil servants in Nigeria. However, registration is open to anyone who seeks a comprehensive health tracking experience and access to expert health practitioners.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="200">
+          <i class="bx bx-help-circle icon-help"></i>
+          <a data-bs-toggle="collapse" data-bs-target="#faq-list-3" class="collapsed">Is any form of payment necessary? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-3" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              No, there is no requirement for payment unless explicitly requested by the healthcare practitioner for specific services.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="300">
+          <i class="bx bx-help-circle icon-help"></i>
+          <a data-bs-toggle="collapse" data-bs-target="#faq-list-4" class="collapsed">How secure is my health data on your platform? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-4" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Your health data is highly secure on our platform. We implement robust security measures to ensure the confidentiality and protection of your personal health information.
+            </p>
+          </div>
+        </li>
+
+        <li data-aos="fade-up" data-aos-delay="400">
+          <i class="bx bx-help-circle icon-help"></i>
+          <a data-bs-toggle="collapse" data-bs-target="#faq-list-5" class="collapsed">Can I integrate my fitness tracker with BeaconFit? <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+          <div id="faq-list-5" class="collapse" data-bs-parent=".faq-list">
+            <p>
+              Absolutely! BeaconFit seamlessly integrates with various fitness trackers, allowing you to effortlessly sync and monitor your physical activities for a holistic health overview.
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+<!-- End Frequently Asked Questions Section -->
+    
+
+    <!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Contact</h2>
+      <p>Connect with BeaconFit for a healthier and happier lifestyle. Reach out to us for any inquiries or feedback.</p>
+    </div>
+  <div class="container">
+    <div class="row mt-5">
+
+      <div class="col-lg-4">
+        <div class="info">
+          <div class="address">
+            <i class="bi bi-geo-alt"></i>
+            <h4>Location:</h4>
+            <p>042 Villa Odim, University of Nigeria, Nsukka<br>Nigeria</p>
+          </div>
+
+          <div class="email">
+            <i class="bi bi-envelope"></i>
+            <h4>Email:</h4>
+            <p>nzeremichael2020@gmail.com</p>
+          </div>
+
+          <div class="phone">
+            <i class="bi bi-phone"></i>
+            <h4>Call:</h4>
+            <p>+2347063852480</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-8 mt-5 mt-lg-0">
+
+        <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="col-md-6 form-group mt-3 mt-md-0">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+            </div>
+          </div>
+          <div class="form-group mt-3">
+            <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="form-group mt-3">
+            <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+          </div>
+          <div class="my-3">
+            <div class="loading">Loading</div>
+            <div class="error-message"></div>
+            <div class="sent-message">Your message has been sent. Thank you!</div>
+          </div>
+          <div class="text-center"><button type="submit">Send Message</button></div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</section><!-- End Contact Section -->
+
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+<footer id="footer">
+
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-3 col-md-6 footer-contact">
+          <h3>BeaconFit</h3>
+          <p>
+            042 Villa Odim, University of Nigeria, Nsukka<br>
+            Nigeria <br><br>
+            <strong>Phone:</strong> +2347063852480<br>
+            <strong>Email:</strong> nzeremichael2020@gmail.com<br>
+          </p>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links">
+          
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Health Assessments</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Medication Management</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Specalized care</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Awareness Blogs</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Seamless Connectivity</a></li>
+            <li><i class="bx bx-chevron-right"></i> <a href="#">Medical Documentation</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-6 footer-newsletter">
+          <h4>Join Our Newsletter</h4>
+          <p>Subscribe to our newsletter for the latest health tips, updates, and exclusive offers.</p>
+          <form action="" method="post">
+            <input type="email" name="email" placeholder="Your Email"><input type="submit" value="Subscribe">
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container d-md-flex py-4">
+
+    <div class="me-md-auto text-center text-md-start">
+      <div class="copyright">
+        &copy; Copyright <strong><span>BeaconFit</span></strong>. 
+      </div>
+    </div>
+    <div class="social-links text-center text-md-right pt-3 pt-md-0">
+      <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+      <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+      <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+      <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+      <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+    </div>
+  </div>
+</footer><!-- End Footer -->
+
+ 
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
+
+{% endblock content %}
+
+{% load static %}
+
+
